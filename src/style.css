@@ -1,0 +1,43 @@
+#cloud {
+    background: rgba(255, 255, 255);
+    width: 75px;
+    height: 50px;
+    border-radius: 150px;
+    box-shadow: 1px 1px 11px 0 rgba(0, 0, 0, 0.6);
+    display: grid;
+    place-content: center;
+}
+
+#cloud:after {
+    content: '';
+    background: rgba(255, 255, 255);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -50px;
+    left: 50px;
+}
+
+#cloud:before {
+    content: '';
+    background: rgba(255, 255, 255);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: -90px;
+    right: 40px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
