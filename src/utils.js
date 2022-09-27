@@ -49,7 +49,7 @@ export const ListToRender = [
           // }
           else {
             setTimeout(function () {
-              v?.[i]?.onclick(e, v, ind);
+              v?.[i]?.onclick(e, [], ind);
             }, i * 400);
           }
         }
@@ -77,6 +77,11 @@ export const ListToRenderMotion = [
       var left = el.offsetLeft;
       el.style.position = "absolute";
       el.style.left = left + parseInt(elInput) * repeat + "px";
+      for (let i = 1; i <= list.length; i++) {
+        setTimeout(() => {
+          list?.[i]?.onclick(e, [], id);
+        }, i * 400);
+      }
     },
     inputs: <input id="motion1Text" type="number" style={{ color: "black" }} />,
   },
@@ -93,6 +98,11 @@ export const ListToRenderMotion = [
       var left = el.offsetLeft;
       el.style.position = "absolute";
       el.style.left = left - parseInt(elInput) * repeat + "px";
+      for (let i = 1; i <= list.length; i++) {
+        setTimeout(() => {
+          list?.[i]?.onclick(e, [], id);
+        }, i * 400);
+      }
     },
     inputs: <input id="motion2Text" type="number" style={{ color: "black" }} />,
   },
@@ -108,6 +118,11 @@ export const ListToRenderMotion = [
         : 0;
       el.style.transform = `rotate(${angle - parseInt(elInput) * repeat}deg)`;
       angle -= parseInt(elInput) * repeat;
+      for (let i = 1; i <= list.length; i++) {
+        setTimeout(() => {
+          list?.[i]?.onclick(e, [], id);
+        }, i * 400);
+      }
     },
     inputs: <input id="motion3Text" type="number" style={{ color: "black" }} />,
   },
@@ -123,6 +138,11 @@ export const ListToRenderMotion = [
         : 0;
       el.style.transform = `rotate(${angle + parseInt(elInput) * repeat}deg)`;
       angle += parseInt(elInput) * repeat;
+      for (let i = 1; i <= list.length; i++) {
+        setTimeout(() => {
+          list?.[i]?.onclick(e, [], id);
+        }, i * 400);
+      }
     },
     inputs: <input id="motion4Text" type="number" style={{ color: "black" }} />,
   },
@@ -137,6 +157,11 @@ export const ListToRenderMotion = [
         ? document.getElementById("motion5Text").value
         : 0;
       el.style.transform = `rotate(${parseInt(elInput) * repeat}deg)`;
+      for (let i = 1; i <= list.length; i++) {
+        setTimeout(() => {
+          list?.[i]?.onclick(e, [], id);
+        }, i * 400);
+      }
     },
     inputs: <input id="motion5Text" type="number" style={{ color: "black" }} />,
   },
